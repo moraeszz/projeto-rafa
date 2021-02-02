@@ -1,0 +1,44 @@
+package br.edu.academia.model;
+
+public class Tela {
+
+//	Atributos (privado) da pessoa
+	public String nome;
+	private double altura;
+	private double peso;
+	private double idade;
+	public String sexo;
+	public String nivelAtividade;
+	
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+	
+	public double getAltura() {
+		return this.altura;
+	}
+	
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+	
+	public double getPeso() {
+		return this.peso;
+	}
+	
+	public void setIdade(double idade) {
+		this.idade = idade;
+	}
+	
+	public double getIdade() {
+		return this.idade;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}
