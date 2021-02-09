@@ -1,0 +1,60 @@
+package br.edu.academia;
+
+import java.time.LocalDate;
+
+import br.edu.academia.model.NivelAtividade;
+import br.edu.academia.model.Pessoa;
+
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Pessoa dadosRafa = new Pessoa();
+		
+		dadosRafa.setNome("Rafaela");
+		dadosRafa.setSexo("F");
+		dadosRafa.setPeso(120);
+		dadosRafa.setAltura(1.68);
+		dadosRafa.setDataDeNascimento(LocalDate.of(2004, 2, 18));
+		dadosRafa.setNivelAtividade(NivelAtividade.MODERADO);
+		System.out.println("** " + dadosRafa.getNome() + " **");
+		System.out.println("IMC: " + dadosRafa.getImc());
+		System.out.println("Situação: " + dadosRafa.getStatusImc());
+		System.out.println("Idade: " + dadosRafa.getIdade());
+		System.out.println("NCD: " + dadosRafa.getNcd1());
+		System.out.println("***********************************");
+		
+Pessoa dadosPedro = new Pessoa();
+		
+		dadosPedro.setNome("Pedro");
+		dadosPedro.setSexo("M");
+		dadosPedro.setPeso(75);
+		dadosPedro.setAltura(1.75);
+		dadosPedro.setDataDeNascimento(LocalDate.of(2003, 2, 18));
+		dadosPedro.setNivelAtividade(NivelAtividade.MODERADO);
+		System.out.println("** " + dadosPedro.getNome() + " **");
+		System.out.println("IMC: " + dadosPedro.getImc());
+		System.out.println("Situação: " + dadosPedro.getStatusImc());
+		System.out.println("Idade: " + dadosPedro.getIdade());
+		System.out.println("NCD: " + dadosPedro.getNcd());
+		System.out.println("***********************************");
+		
+Pessoa dadosMaria = new Pessoa();
+		
+		dadosMaria.setNome("pedro");
+		dadosMaria.setSexo("M");
+		dadosMaria.setPeso(54);
+		dadosMaria.setAltura(1.68);
+		dadosMaria.setDataDeNascimento(LocalDate.of(2003, 2, 18));
+		dadosMaria.setNivelAtividade(NivelAtividade.MODERADO);
+		System.out.println("** " + dadosMaria.getNome() + " **");
+		System.out.println("IMC: " + dadosMaria.getImc());
+		System.out.println("Situação: " + dadosMaria.getStatusImc());
+		System.out.println("Idade: " + dadosMaria.getIdade());
+		System.out.println("NCD: " + dadosMaria.getNcd());
+	
+	}
+
+	
+}

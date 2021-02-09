@@ -1,0 +1,32 @@
+package br.edu.academia.gui;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class FrameTela{
+	
+	public void criarTela() {
+		
+		
+		JFrame tela = new JFrame();
+		tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		tela.setSize(500, 300);
+		tela.setTitle("Academia Boa Forma");
+		tela.setLayout(null);
+		
+		// Criar a label
+		JLabel labelAltura = new JLabel();
+		labelAltura.setText("Altura: ");
+		labelAltura.setBounds(10, 10, 60, 30);
+		
+		JTextField textAltura = new JTextField();
+		textAltura.setBounds(90, 10, 100, 30);
+		
+		//Criar Label e TextField da base 
+		JLabel labelBase = new JLabel();
+		labelBase.setText("Base: ");
+		labelBase.setBounds(10, 45, 80, 30);
+	}
+}
+

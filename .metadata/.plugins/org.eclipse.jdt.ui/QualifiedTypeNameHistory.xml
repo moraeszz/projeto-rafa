@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicBorders.RadioButtonBorder"/>
-<fullyQualifiedTypeName name="br.edu.academia.model.Pessoa"/>
 <fullyQualifiedTypeName name="java.time.Period"/>
+<fullyQualifiedTypeName name="br.edu.academia.model.NivelAtividade"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyleConstants"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
+<fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
+<fullyQualifiedTypeName name="javax.swing.JComboBox"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="br.edu.academia.model.Pessoa"/>
 </qualifiedTypeNameHistroy>

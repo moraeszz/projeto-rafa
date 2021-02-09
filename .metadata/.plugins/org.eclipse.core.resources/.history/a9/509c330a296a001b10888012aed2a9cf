@@ -1,0 +1,17 @@
+package br.edu.academia.gui;
+
+import javax.swing.JFrame;
+
+public class FrameTela{
+	
+	public void criarTela() {
+		
+		JFrame tela = new JFrame();
+		tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		tela.setSize(500, 300);
+		tela.setTitle("Academia Boa Forma");
+		tela.setLayout(null);
+		
+	}
+}
+

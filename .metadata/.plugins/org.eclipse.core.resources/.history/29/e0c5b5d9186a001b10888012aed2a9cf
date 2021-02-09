@@ -1,0 +1,29 @@
+package br.edu.academia;
+
+import java.time.LocalDate;
+
+import br.edu.academia.model.NivelAtividade;
+import br.edu.academia.model.Pessoa;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Pessoa dadosRafa = new Pessoa();
+		
+		dadosRafa.setNome("Rafaela");
+		dadosRafa.setSexo("F");
+		dadosRafa.setPeso(54);
+		dadosRafa.setAltura(1.68);
+		dadosRafa.setDataDeNascimento(LocalDate.of(2004, 2, 18));
+		dadosRafa.setNivelAtividade(NivelAtividade.MODERADO);
+		System.out.println("** " + dadosRafa.getNome() + " **");
+		System.out.println("IMC: " + dadosRafa.getImc());
+		System.out.println("Situação: " + dadosRafa.getStatusImc());
+		System.out.println("Idade: " + dadosRafa.getIdade());
+		System.out.println("NCD: " + dadosRafa.getNcd1());
+		
+		
+	}
+
+}

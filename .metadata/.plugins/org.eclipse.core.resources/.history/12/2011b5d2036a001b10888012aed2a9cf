@@ -1,0 +1,8 @@
+package br.edu.academia.model;
+
+public class NivelAtividade {
+
+	public static final String LEVE = ("1.6");
+
+	
+}
