@@ -146,12 +146,12 @@ public class Tela {
 		JLabel labelResultadoNome = new JLabel();
 		labelResultadoNome.setText("Nome: ");
 		labelResultadoNome.setFont(subTitulo);
-		labelResultadoNome.setBounds(20, 330, 200, 30);
+		labelResultadoNome.setBounds(20, 300, 200, 30);
 		
 		JLabel labelResultadoIdade = new JLabel();
 		labelResultadoIdade.setText("Idade: ");
 		labelResultadoIdade.setFont(subTitulo);
-		labelResultadoIdade.setBounds(20, 300, 200, 30);
+		labelResultadoIdade.setBounds(20, 330, 200, 30);
 	
 		JLabel labelResultadoNcd = new JLabel();
 		labelResultadoNcd.setText("Ncd: ");
@@ -166,10 +166,12 @@ public class Tela {
 		JLabel labelResultadoImcStatus = new JLabel();
 		labelResultadoImcStatus.setText("Status Imc: ");
 		labelResultadoImcStatus.setFont(subTitulo);
-		labelResultadoImcStatus.setBounds(20, 420, 200, 30);
+		labelResultadoImcStatus.setBounds(20, 420, 400, 30);
 
 		
 		//Colocar o labelAltura dentro de painel de conteudo -> contentPane
+		tela.setVisible(true);
+
 		tela.getContentPane().add(labelTitulo);
 		tela.getContentPane().add(labelNome);
 		tela.getContentPane().add(textoDoNome);
@@ -192,7 +194,6 @@ public class Tela {
 		tela.getContentPane().add(labelResultadoNcd);
 		tela.getContentPane().add(labelResultadoImc);
 		tela.getContentPane().add(labelResultadoImcStatus);
-		tela.setVisible(true);
 		
 		
 		// COLOCANDO PRA FUNCIONAR OS BOTÕES
@@ -206,9 +207,16 @@ public class Tela {
 				pessoa.setPeso(Double.parseDouble(textoDoPeso.getText()));
 				pessoa.setDataDeNascimento(LocalDate.of(2004, 2, 18));
 				getDia(textoDataNascimento.getText());
-				pessoa.setSexo(rdFeminino.isSelected()?'F':'M');
-				pessoa.setNivelAtividade(comboNiveisAtividade.getSelectedItem().toString());
+				if (rdFeminino.isSelected() ) { 
+					String generoSelecionado = "F"; 
+					pessoa.setSexo(generoSelecionado);
+					}
+				else if ( rdMasculino.isSelected() ) { 
+					String generoSelecionado = "M"; 
+					pessoa.setSexo(generoSelecionado);
+				}
 				
+				pessoa.setNivelAtividade(comboNiveisAtividade.getSelectedItem().toString());
 				labelResultadoNome.setText("Nome: " + textoDoNome.getText());
 				labelResultadoIdade.setText("Idade: " + pessoa.getIdade());
 				labelResultadoNcd.setText("Ncd: " + String.format("%.2f", pessoa.getNcd()));

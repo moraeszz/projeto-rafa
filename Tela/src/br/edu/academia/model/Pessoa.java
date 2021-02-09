@@ -4,150 +4,143 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class Pessoa {
-	
-
 
 //		Atributos (privado) da pessoa
-		private String nome;
-		private double altura;
-		private double peso;
-		private LocalDate dataDeNascimento;
-		private String sexo;
-		private String nivelAtividade;
-		
-		
-		public void setNome(String nome) {
-			this.nome = nome;
-		}
-		
-		public String getNome() {
-			return this.nome;
-		}
-		
-		public void setAltura(double altura) {
-			this.altura = altura;
-		}
-		
-		public double getAltura() {
-			return this.altura;
-		}
-		
-		public void setPeso(double peso) {
-			this.peso = peso;
-		}
-		
-		public double getPeso() {
-			return this.peso;
-		}
-		
-		public void setDataDeNascimento(LocalDate dataDeNascimento) {
-			this.dataDeNascimento = dataDeNascimento;
-		}
-		
-		public LocalDate getDataDeNascimento() {
-			return this.dataDeNascimento;
-		}
-		
-		public void setSexo(String sexo) {
-			this.sexo=sexo;
-		}
-		
-		public String getSexo() {
-			return this.sexo;
-		}
-		
-		public void setNivelAtividade(String nivelAtividade) {
-			this.nivelAtividade = nivelAtividade;
-		}
-		
-		public String getNivelAtividade() {
-			return this.nivelAtividade;
-		}
-		
-//		Obter a idade da pessoa
-		public int getIdade() {
-			LocalDate hoje = LocalDate.now();
-			Period periodo = Period.between(this.dataDeNascimento, hoje);
-			return periodo.getYears(); 
-		}
-		
-		
-//		Calcular IMC da pessoa 
-		public double getImc() {
-			return this.peso/(this.altura*altura);
-		}
-		
-		public String getStatusImc() {
-			if (this.getImc() < 18.5) {
-				return "Abaixo do peso";
-			} else if (this.getImc() > 18.5 && this.getImc() < 25) {
-				return ("Peso ideal");
-			} else if (this.getImc() >= 25 && this.getImc() < 30) {
-				return ("Levemente acima do peso");
-			} else if (this.getImc() >= 30 && this.getImc() < 35) {
-				return "Obesidade grau I";
-			} else if (this.getImc() >= 35 && this.getImc() <= 40) {
-				return "Obesidade grau II (Severa)";
-			} else {
-				return "Obesidade III (Morbida)";
-			}
-		}
-		
-		
-		
-//		Calcular Ncd Homem
-		public double getNcd() {
-			if (this.sexo == "M") {
-				
-			// Em relação a idade
-			if (this.getIdade() >= 18 && this.getIdade() < 30) {
-				return 15.3 * this.peso + 679; 
-			} else if (this.getIdade() >= 31 && this.getIdade() <= 60) {
-				return 11.6 * this.peso + 879;
-			} else {
-				return 13.5 * this.peso + 497;
-			}
-		}
-			
-			// Em relação as atividades físicas
-			if (this.sexo=="M") {
-				
-			if (this.nivelAtividade == NivelAtividade.LEVE) {
-				return getNcd() * 1.5;
-			} else if (this.nivelAtividade == NivelAtividade.MODERADO) {
-				return getNcd() * 1.8;
-			} else if (this.nivelAtividade == NivelAtividade.INTENSO) {
-				return getNcd() * 2.1;
-			}
-		}
-			return getNcd();
-		}	
+	private String nome;
+	private double altura;
+	private double peso;
+	private LocalDate dataDeNascimento;
+	private String sexo;
+	private String nivelAtividade;
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
+	public double getAltura() {
+		return this.altura;
+	}
+
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+
+	public double getPeso() {
+		return this.peso;
+	}
+
+	public void setDataDeNascimento(LocalDate dataDeNascimento) {
+		this.dataDeNascimento = dataDeNascimento;
+	}
+
+	public int getDataDeNascimento() {
+		LocalDate hoje = LocalDate.now();
+		Period periodo = Period.between(this.dataDeNascimento, hoje);
 		
-		//Calcular Ncd Mulher
-		public double getNcd1() {
-			if (this.sexo=="F") {
-				
+		return periodo.getYears();
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getSexo() {
+		return this.sexo;
+	}
+
+	public void setNivelAtividade(String nivelAtividade) {
+		this.nivelAtividade = nivelAtividade;
+	}
+
+	public String getNivelAtividade() {
+		return this.nivelAtividade;
+	}
+
+//		Obter a idade da pessoa
+	public int getIdade() {
+		LocalDate hoje = LocalDate.now();
+		Period periodo = Period.between(this.dataDeNascimento, hoje);
+		return periodo.getYears();
+	}
+
+//		Calcular IMC da pessoa 
+	public double getImc() {
+		return this.peso / (this.altura * altura);
+	}
+
+	public String getStatusImc() {
+		if (this.getImc() < 18.5) {
+			return "Abaixo do peso";
+		} else if (this.getImc() > 18.5 && this.getImc() < 25) {
+			return ("Peso ideal");
+		} else if (this.getImc() >= 25 && this.getImc() < 30) {
+			return ("Levemente acima do peso");
+		} else if (this.getImc() >= 30 && this.getImc() < 35) {
+			return "Obesidade grau I";
+		} else if (this.getImc() >= 35 && this.getImc() <= 40) {
+			return "Obesidade grau II (Severa)";
+		} else {
+			return "Obesidade III (Morbida)";
+		}
+	}
+
+//		Calcular Ncd Homem
+	public double getNcd() {
+		
+		double ncd = 0;
+		
+		if (this.sexo == "M") {
+
 			// Em relação a idade
 			if (this.getIdade() >= 18 && this.getIdade() < 30) {
-				return 14.7 * this.peso + 496; 
+				ncd = 15.3 * this.peso + 679;
 			} else if (this.getIdade() >= 31 && this.getIdade() <= 60) {
-				return 8.7 * this.peso + 829;
+				ncd = 11.6 * this.peso + 879;
 			} else {
-				return 10.5 * this.peso + 596;
+				ncd = 13.5 * this.peso + 497;
 			}
-		}
 			
-			// Em relação as atividades físicas
-			if (this.nivelAtividade == NivelAtividade.LEVE1) {
-				return getNcd1() * 1.6;
-			} else if (this.nivelAtividade == NivelAtividade.MODERADO1) {
-				return getNcd1() * 1.6;
-			} else if (this.nivelAtividade == NivelAtividade.INTENSO1) {
-				return getNcd1() * 1.8;
+			if (this.nivelAtividade == AtividadesFisicasNiveis.LEVE) {
+				ncd *= 1.5;
+			} else if (this.nivelAtividade == AtividadesFisicasNiveis.MODERADO) {
+				ncd *= 1.8; // ncd = ncd * 1.8
+			} else if (this.nivelAtividade == AtividadesFisicasNiveis.INTENSO) {
+				ncd *= 2.1;
 			}
+			
+		} 
 		
-			return getNcd1();
-}
-		
+		if (this.sexo == "F") {
+
+			// Em relação a idade
+			if (this.getIdade() >= 18 && this.getIdade() < 30) {
+				ncd = 15.3 * this.peso + 679;
+			} else if (this.getIdade() >= 31 && this.getIdade() <= 60) {
+				ncd = 11.6 * this.peso + 879;
+			} else {
+				ncd = 13.5 * this.peso + 497;
+			}
+			
+			if (this.nivelAtividade == AtividadesFisicasNiveis.LEVE) {
+				ncd *= 1.5;
+			} else if (this.nivelAtividade == AtividadesFisicasNiveis.MODERADO) {
+				ncd *= 1.8; // ncd = ncd * 1.8
+			} else if (this.nivelAtividade == AtividadesFisicasNiveis.INTENSO) {
+				ncd *= 2.1;
+			}
+			
+		} 
+
+		return ncd;
+	}
+
+	
 }
