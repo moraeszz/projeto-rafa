@@ -63,9 +63,10 @@ public class Pessoa {
 	public String getNivelAtividade() {
 		return this.nivelAtividade;
 	}
+	
 
 //		Obter a idade da pessoa
-	public int getIdade() {
+		public int getIdade() {
 		LocalDate hoje = LocalDate.now();
 		Period periodo = Period.between(this.dataDeNascimento, hoje);
 		return periodo.getYears();
@@ -136,11 +137,7 @@ public class Pessoa {
 			} else if (this.nivelAtividade == AtividadesFisicasNiveis.INTENSO) {
 				ncd *= 2.1;
 			}
-			
 		} 
-
 		return ncd;
 	}
-
-	
 }

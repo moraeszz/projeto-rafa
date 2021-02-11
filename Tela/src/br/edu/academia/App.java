@@ -71,6 +71,4 @@ Pessoa dadosMarco = new Pessoa();
 		System.out.println("NCD: " + dadosMarco.getNcd());
 		System.out.println("***********************************");
 	}
-
-	
 } 
